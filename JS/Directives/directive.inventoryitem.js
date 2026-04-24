@@ -21,6 +21,10 @@ app.directive('inventoryitem', function() {
                 if(!$scope.lockExpansion)
                     $scope.expanded = !$scope.expanded;
             };
+
+            $scope.hasNonZeroStatValue = function(){
+                return Object.values($scope.item.stats).find(s => s.finalValue !== 0) !== undefined;
+            };
         }
     };
  });

@@ -44,7 +44,7 @@
         <div ng-if="item.uses > 0 || item.maxUses > 0 || item.minRange.finalValue > 0 || sysdata.utilizedStats.length > 0" class="rem0_8Text">
             <md-divider></md-divider>
             <div layout="row" layout-wrap>
-                <div ng-if="sysdata.utilizedStats.length > 0" ng-repeat="(stat, statObj) in item.stats track by stat" layout="row" layout-align="space-between" flex="33" class="horizontalPadding">
+                <div ng-if="sysdata.utilizedStats.length > 0 || hasNonZeroStatValue()" ng-repeat="(stat, statObj) in item.stats track by stat" layout="row" layout-align="space-between" flex="33" class="horizontalPadding">
                     <span>{{stat}}</span>
                     <span ng-class="{'buffedStatColor': (statObj.baseValue < statObj.finalValue && !statObj.invertModifiedDisplayColors) || (statObj.baseValue > statObj.finalValue && statObj.invertModifiedDisplayColors), 'debuffedStatColor': (statObj.baseValue > statObj.finalValue && !statObj.invertModifiedDisplayColors) || (statObj.baseValue < statObj.finalValue && statObj.invertModifiedDisplayColors)}">
                         <i class="fa fa-long-arrow-down" ng-if="statObj.baseValue > statObj.finalValue" aria-hidden="true"></i>
