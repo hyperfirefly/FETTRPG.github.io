@@ -5,7 +5,7 @@ app.controller('HomepageCtrl', ['$scope', '$http', '$location', '$cookies', '$md
 
     $http({
         method: "GET",
-        url: "https://2zxk6z36pe.execute-api.us-east-2.amazonaws.com/Prod/api/teamList"
+        url: "https://1rkc4sm92h.execute-api.us-east-2.amazonaws.com/Prod/api/teamList"
     }).then(function successCallback(response) {
         $scope.teamList = response.data;
         $scope.loadingTeams = false;
