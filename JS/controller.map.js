@@ -26,7 +26,7 @@ app.controller('MapCtrl', ['$scope', '$http', '$routeParams', '$window', functio
     //Call API to fetch JSON on load
     $http({
         method: "GET",
-        url: "https://2zxk6z36pe.execute-api.us-east-2.amazonaws.com/Prod/api/map/" + $routeParams.teamName
+        url: "https://1rkc4sm92h.execute-api.us-east-2.amazonaws.com/Prod/api/map/" + $routeParams.teamName
     }).then(function successCallback(response) {
         $scope.data = response.data;
         $scope.mapSegmentTab_OnClick(0);
