@@ -14,9 +14,10 @@ app.controller('AnalyzeCtrl', ['$scope', '$http', '$routeParams', function ($sco
   $scope.warpGroups = [];
   
   //Call API to fetch JSON on load
+     //url: "https://2zxk6z36pe.execute-api.us-east-2.amazonaws.com/Prod/api/map/analyze/" + $routeParams.teamName
   $http({
       method: "GET",
-      url: "https://2zxk6z36pe.execute-api.us-east-2.amazonaws.com/Prod/api/map/analyze/" + $routeParams.teamName
+      url: "https://1rkc4sm92h.execute-api.us-east-2.amazonaws.com/Prod/api/map/analyze/" + $routeParams.teamName
   }).then(function successCallback(response) {
       $scope.data = response.data;
       
